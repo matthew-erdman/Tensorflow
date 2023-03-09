@@ -1,0 +1,6 @@
+**/.DS_STORE
+*.out
+images/**
+all_images/**
+checkpoints*/**
+rice_model_save/**

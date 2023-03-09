@@ -1,0 +1,108 @@
+2023-03-09 10:32:14.771131: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Found 10000 files belonging to 5 classes.
+Using 7000 files for training.
+2023-03-09 10:32:23.404504: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Found 10000 files belonging to 5 classes.
+Using 3000 files for validation.
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 80, 80, 32)        16256     
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 40, 40, 32)       0         
+ )                                                               
+                                                                 
+ dropout (Dropout)           (None, 40, 40, 32)        0         
+                                                                 
+ conv2d_1 (Conv2D)           (None, 36, 36, 64)        51264     
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 18, 18, 64)       0         
+ 2D)                                                             
+                                                                 
+ dropout_1 (Dropout)         (None, 18, 18, 64)        0         
+                                                                 
+ conv2d_2 (Conv2D)           (None, 16, 16, 128)       73856     
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 8, 8, 128)        0         
+ 2D)                                                             
+                                                                 
+ dropout_2 (Dropout)         (None, 8, 8, 128)         0         
+                                                                 
+ flatten (Flatten)           (None, 8192)              0         
+                                                                 
+ dense (Dense)               (None, 2048)              16779264  
+                                                                 
+ dropout_3 (Dropout)         (None, 2048)              0         
+                                                                 
+ dense_1 (Dense)             (None, 512)               1049088   
+                                                                 
+ dropout_4 (Dropout)         (None, 512)               0         
+                                                                 
+ dense_2 (Dense)             (None, 128)               65664     
+                                                                 
+ dropout_5 (Dropout)         (None, 128)               0         
+                                                                 
+ dense_3 (Dense)             (None, 5)                 645       
+                                                                 
+=================================================================
+Total params: 18,036,037
+Trainable params: 18,036,037
+Non-trainable params: 0
+_________________________________________________________________
+
+Epoch 1/40
+
+Epoch 1: val_accuracy improved from -inf to 0.20033, saving model to checkpoints/checkpoints_01
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _update_step_xla while saving (showing 4 of 4). These functions will not be directly callable after loading.
+110/110 - 118s - loss: 6.2476 - accuracy: 0.2159 - val_loss: 1.6093 - val_accuracy: 0.2003 - 118s/epoch - 1s/step
+Epoch 2/40
+
+Epoch 2: val_accuracy improved from 0.20033 to 0.84100, saving model to checkpoints/checkpoints_02
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _update_step_xla while saving (showing 4 of 4). These functions will not be directly callable after loading.
+110/110 - 124s - loss: 1.1141 - accuracy: 0.5094 - val_loss: 0.4432 - val_accuracy: 0.8410 - 124s/epoch - 1s/step
+Epoch 3/40
+
+Epoch 3: val_accuracy improved from 0.84100 to 0.93067, saving model to checkpoints/checkpoints_03
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _update_step_xla while saving (showing 4 of 4). These functions will not be directly callable after loading.
+110/110 - 137s - loss: 0.3247 - accuracy: 0.8780 - val_loss: 0.2039 - val_accuracy: 0.9307 - 137s/epoch - 1s/step
+Epoch 4/40
+
+Epoch 4: val_accuracy improved from 0.93067 to 0.95533, saving model to checkpoints/checkpoints_04
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _update_step_xla while saving (showing 4 of 4). These functions will not be directly callable after loading.
+110/110 - 99s - loss: 0.2407 - accuracy: 0.9151 - val_loss: 0.1538 - val_accuracy: 0.9553 - 99s/epoch - 897ms/step
+Epoch 5/40
+
+Epoch 5: val_accuracy improved from 0.95533 to 0.96267, saving model to checkpoints/checkpoints_05
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _update_step_xla while saving (showing 4 of 4). These functions will not be directly callable after loading.
+110/110 - 132s - loss: 0.1814 - accuracy: 0.9353 - val_loss: 0.1306 - val_accuracy: 0.9627 - 132s/epoch - 1s/step
+Epoch 6/40
+
+Epoch 6: val_accuracy did not improve from 0.96267
+110/110 - 123s - loss: 0.1713 - accuracy: 0.9431 - val_loss: 0.1512 - val_accuracy: 0.9543 - 123s/epoch - 1s/step
+Epoch 7/40
+
+Epoch 7: val_accuracy did not improve from 0.96267
+110/110 - 103s - loss: 0.1533 - accuracy: 0.9457 - val_loss: 0.1217 - val_accuracy: 0.9580 - 103s/epoch - 937ms/step
+Epoch 8/40
+
+Epoch 8: val_accuracy improved from 0.96267 to 0.96867, saving model to checkpoints/checkpoints_08
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _update_step_xla while saving (showing 4 of 4). These functions will not be directly callable after loading.
+110/110 - 100s - loss: 0.1577 - accuracy: 0.9461 - val_loss: 0.1079 - val_accuracy: 0.9687 - 100s/epoch - 911ms/step
+Epoch 9/40
+
+Epoch 9: val_accuracy did not improve from 0.96867
+110/110 - 103s - loss: 0.1301 - accuracy: 0.9550 - val_loss: 0.1193 - val_accuracy: 0.9597 - 103s/epoch - 932ms/step
+Epoch 10/40
+
+Epoch 10: val_accuracy did not improve from 0.96867
+110/110 - 92s - loss: 0.1311 - accuracy: 0.9556 - val_loss: 0.1169 - val_accuracy: 0.9633 - 92s/epoch - 836ms/step
+Epoch 11/40
+
+Epoch 11: val_accuracy did not improve from 0.96867
+Restoring model weights from the end of the best epoch: 8.
+110/110 - 92s - loss: 0.1330 - accuracy: 0.9521 - val_loss: 0.1160 - val_accuracy: 0.9617 - 92s/epoch - 839ms/step
+Epoch 11: early stopping
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _update_step_xla while saving (showing 4 of 4). These functions will not be directly callable after loading.
